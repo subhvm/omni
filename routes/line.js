@@ -1,6 +1,6 @@
 const express = require('express');
 const Line = require('../model/lineSchema')
-const Plan = require('../model/planSchema,')
+const Plan = require('../model/planSchema')
 
 const router = express.Router();
 router.get('/:id', async (req,res)=> {
