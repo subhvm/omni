@@ -16,7 +16,7 @@ mongoose
 
 app.get("/", (req, res) => {
   res.send("Server is running");
-});
+}); 
 app.use("/api/user", User);
 app.use("/api/plan", Plan);
 app.use("/api/line", Line);

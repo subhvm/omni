@@ -32,7 +32,7 @@ router.post("/:account", async (req, res) => {
   try {
     const accountNumber = req.params.account;
     const lines = await Line.find({ accountNumber });
-    await User.updateOne({lines: })
+    await User.updateOne({lines: []});
     res.send(lines);
   } catch (error) {
     console.log(error);
