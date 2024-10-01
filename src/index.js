@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 const User = require("../routes/user");
 const Plan = require("../routes/plan");
-const Line = require("../routes/Line");
+const Line = require("../routes/line");
 require("dotenv").config();
 
 app.use(express.json());
