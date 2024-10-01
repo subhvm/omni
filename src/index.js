@@ -2,9 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 5001;
-const User = require("./routes/user");
-const Plan = require("./routes/plan");
-const Line = require("./routes/Line");
+const User = require("../routes/user");
+const Plan = require("../routes/plan");
+const Line = require("../routes/Line");
 require("dotenv").config();
 
 app.use(express.json());
