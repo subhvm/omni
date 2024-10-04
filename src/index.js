@@ -5,14 +5,19 @@ const PORT = process.env.PORT || 5001;
 const User = require("../routes/user");
 const Plan = require("../routes/plan");
 const Line = require("../routes/line");
-require("dotenv").config
+const cors  = require('cors')
+
+require("dotenv").config();
 
 app.use(express.json());
+
 
 mongoose
   .connect(process.env.mongo_url)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error: ", err));
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("BACKEND SERVICE UP. UNDER MAINTENANCE");
